@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home work Pasichnyk Evelina</title>
+</head>
+<body>
+    <script>
+        const userYearOfBirth = parseInt(prompt('Введіть рік Вашого народження'));
+        if (userYearOfBirth == null) {
+            alert('Шкода, що Ви не захотіли ввести свій рік народження');
+        }; 
+
+
+        const userCity = prompt('Введіть Ваше місто');
+        if (userCity == null) {
+            alert('Шкода, що Ви не захотіли ввести своє місто');
+        }; 
+
+
+        const userSport = prompt('Введіть Ваш улюблений вид спорту');
+        if (userSport == null) {
+            alert('Шкода, що Ви не захотіли ввести свій улюблений вид спорту');
+        };
+
+        const thisYear = 2024;
+
+        let userAge;
+        userAge = thisYear - userYearOfBirth;
+        if (isNaN(userYearOfBirth)) {
+            userAge = "Ви ввели некоректне число";
+        };
+        
+
+        let messageUserCity;
+
+        switch (userCity) {
+            case 'Київ':
+                messageUserCity = 'Ви живете у столиці України';
+                break;
+            case 'Вашингтон':
+                messageUserCity = 'Ви живете у столиці США';
+                break;
+            case 'Лондон':
+                messageUserCity = 'Ви живете у столиці Англії';
+                break;
+            default:
+                messageUserCity = `Ви живете у місті ${userCity}`;
+        };
+        if (typeof userCity === null) {
+            messageUserCity = 'Ви ввели некоректне значення';
+        }
+
+        
+
+        let messageUserSport;
+
+        switch (userSport) {
+            case 'бокс':
+                messageUserSport = 'Круто, хочеш стати як Олександр Усик?';
+                break;
+            case 'футбол':
+                messageUserSport = 'Круто, хочеш стати як Кріштіану Роналду?';
+                break;
+            case 'мма':
+            messageUserSport = 'Круто, хочеш стати як  Жорж Сен-Пьер?';
+                break;
+            default:
+                messageUserSport = `Ваш улюблений спорт ${userSport}`;
+        };
+
+        alert(`Ваш вік ${userAge} , ${messageUserCity} , ${messageUserSport}  `);
+    
+
+
+
+
+    </script>
+</body>
+</html>
